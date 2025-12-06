@@ -9,7 +9,10 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/app.js",
-    "dev": "nodemon --watch src --ext ts --exec \"tsc && node dist/app.js\""
+    "dev": "nodemon --watch src --ext ts --exec \"tsc && node dist/app.js\"",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.1.0",
@@ -19,11 +22,14 @@
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
     "@types/node": "^24.10.1",
     "@types/pg": "^8.15.6",
     "dotenv": "^17.2.3",
+    "jest": "^30.2.0",
     "nodemon": "^3.1.11",
     "prisma": "^7.1.0",
+    "ts-jest": "^29.4.6",
     "typescript": "^5.9.3"
   }
 }
